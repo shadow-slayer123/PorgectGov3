@@ -1,1 +1,89 @@
-<h1>title 1</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+    <title>מתיחה</title>
+    <meta charset="UTF-8"> <!-- הוסף את השורה הזו -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </style>
+</head>
+    <title>מתיחה</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-size: 6vw;
+            text-align: center;
+            padding: 10vh 5vw;
+            margin: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAKElEQVQ4jWNgYMD4wMDAwMDA4B8nghAQAAAAAP//AAAAAACiH3mFAAAAAElFTkSuQmCC');
+        }
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5vh 5vw;
+            border: 2px solid #f00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 8vw;
+            margin-bottom: 2vh;
+        }
+        p {
+            font-size: 5vw;
+            line-height: 1.5;
+            margin-bottom: 10vh;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            border-top: 1px solid #888;
+            color: white;
+            padding: 3vh 0;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 4vw;
+            cursor: pointer;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>התרעה קיצונית</h1>
+        <p>בדקות הקרובות צפויות להתקבל התראות באזורך. עליך לשפר את מיקומך למיגון המיטבי בקירבתך. במקרה של קבלת התראה, עליך להישאר במרחב המוגן עד לקבלת הודעה חדשה.</p>
+        <button onclick="closeWindow();">אישור</button>
+        <audio id="alarmAudio" autoplay loop muted>
+            <source src="alarm.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('alarmAudio');
+            audio.muted = false; // בטל השתקה
+        };
+
+        function closeWindow() {
+            // נסה לסגור את החלון
+            window.close();
+            // אם זה לא עובד, נווט לדף ריק
+            window.location.href = 'about:blank';
+        }
+    </script>
+</body>
+</html>
